@@ -3,7 +3,9 @@ package org.example;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Valid: "+JsonAWSVerifier.verifyAsterisk("src/main/resources/test7.json"));
-
+        if(args.length==1)
+            System.out.println("Valid: "+JsonAWSVerifier.verifyAsterisk(args[0]));
+        else
+            System.out.println("Please specify path to json");
     }
 }
